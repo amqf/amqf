@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Antonio Marcos – Arquiteto de Soluções em Software e Integração de APIs, incluindo WhatsApp Business API." />
+  <title>Antonio Marcos – Arquiteto de Soluções</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a202c;
+      --navy-light: #2d3748;
+      --gray-bg: #f7fafc;
+      --gray-mid: #e2e8f0;
+      --gray-text: #4a5568;
+      --accent: #2b6cb0;
+      --accent-hover: #2c5282;
+      --white: #ffffff;
+      --font: Arial, Helvetica, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--gray-bg);
+      color: var(--navy);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #63b3ed;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #a0aec0;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+
+    .hero-inner { max-width: 820px; margin: 0 auto; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(99, 179, 237, 0.15);
+      border: 1px solid rgba(99, 179, 237, 0.4);
+      color: #63b3ed;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #63b3ed;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #a0aec0;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 32px;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 72px 24px; }
+
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-sub {
+      color: var(--gray-text);
+      font-size: 1rem;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ── SERVICES GRID ── */
+    #servicos { background: var(--white); }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid var(--gray-mid);
+      border-radius: 10px;
+      padding: 32px 28px;
+      background: var(--gray-bg);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(43, 108, 176, 0.1);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .card-icon svg { width: 24px; height: 24px; fill: none; stroke: #63b3ed; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .card p { font-size: 0.9rem; color: var(--gray-text); line-height: 1.65; }
+
+    /* ── ABOUT ── */
+    #sobre { background: var(--gray-bg); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; } }
+
+    .about-text p { color: var(--gray-text); margin-bottom: 16px; font-size: 0.95rem; }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+    .tag {
+      background: var(--navy);
+      color: #a0aec0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .stat-box {
+      border: 1px solid var(--gray-mid);
+      border-radius: 10px;
+      padding: 28px;
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .stat h4 { font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .stat p { font-size: 0.8rem; color: var(--gray-text); margin-top: 4px; }
+
+    /* ── CONTACT ── */
+    #contato { background: var(--white); }
+
+    .contact-card {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) { .contact-card { grid-template-columns: 1fr; } }
+
+    .contact-card h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 8px; }
+    .contact-card > div > p { color: #a0aec0; font-size: 0.95rem; margin-bottom: 20px; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 10px; }
+
+    .contact-info a {
+      color: #63b3ed;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-info a:hover { color: var(--white); }
+
+    .contact-info svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    .cta-aside .btn { white-space: nowrap; }
+
+    /* ── PRIVACY ── */
+    #privacidade { background: var(--gray-bg); }
+
+    .privacy-box {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: 10px;
+      padding: 40px;
+      font-size: 0.875rem;
+      color: var(--gray-text);
+      line-height: 1.75;
+    }
+
+    .privacy-box h3 { color: var(--navy); font-size: 1rem; font-weight: 700; margin: 24px 0 8px; }
+    .privacy-box h3:first-child { margin-top: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #718096;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--navy-light);
+    }
+
+    .footer-brand { color: var(--white); font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: #718096; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-bottom { text-align: center; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      nav { display: none; }
+      .contact-card { padding: 28px 20px; }
+      .privacy-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─────────── HEADER ─────────── -->
+<header>
+  <div class="header-inner">
+    <div class="logo">Antonio Marcos <span>·</span> Arquiteto de Soluções</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="#privacidade">Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ─────────── HERO ─────────── -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-badge">WhatsApp Business API · Integração · Automação</div>
+    <h1>Soluções em Arquitetura de Software e <em>Integração de APIs</em></h1>
+    <p>Desenvolvimento de ecossistemas digitais e automação de processos via WhatsApp Business API para empresas que exigem escala, segurança e conformidade.</p>
+    <a href="#contato" class="btn">Falar com o Especialista</a>
+  </div>
+</section>
+
+<!-- ─────────── SERVIÇOS ─────────── -->
+<section id="servicos">
+  <div class="section-inner">
+    <div class="section-label">O que ofereço</div>
+    <div class="section-title">Soluções Técnicas Especializadas</div>
+    <p class="section-sub">Serviços focados em conformidade, performance e resultados mensuráveis para o seu negócio.</p>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Integração WABA</h3>
+        <p>Configuração e gestão completa de contas oficiais do WhatsApp Business API, garantindo conformidade com as políticas do Meta Business Manager e ativação de número verificado.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3>Chatbots Inteligentes</h3>
+        <p>Desenvolvimento de fluxos conversacionais automatizados com lógica condicional, integração a CRMs e sistemas de atendimento, e automação de processos repetitivos 24/7.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Arquitetura de Sistemas</h3>
+        <p>Consultoria técnica para design de arquiteturas escaláveis, seguras e de alta disponibilidade, incluindo revisão de infraestrutura, APIs RESTful e microsserviços.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── SOBRE ─────────── -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="section-label">Sobre</div>
+    <div class="section-title">Experiência e Especialização</div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Sou Antonio Marcos, Arquiteto de Soluções com foco em integração de sistemas e ecossistemas digitais baseados em comunicação automatizada. Trabalho com empresas para implementar soluções robustas usando a infraestrutura oficial do WhatsApp Business API.</p>
+        <p>Meu trabalho inclui desde a configuração inicial junto ao Meta Business Manager até o desenvolvimento de fluxos conversacionais complexos, sempre com conformidade às políticas da plataforma e às leis de proteção de dados (LGPD).</p>
+        <div class="tag-list">
+          <span class="tag">WhatsApp Business API</span>
+          <span class="tag">Meta Business Manager</span>
+          <span class="tag">Node.js / Python</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">LGPD / Conformidade</span>
+          <span class="tag">Automação</span>
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat"><h4>+50</h4><p>Integrações WABA realizadas</p></div>
+        <div class="stat"><h4>+8</h4><p>Anos em arquitetura de software</p></div>
+        <div class="stat"><h4>100%</h4><p>Conformidade Meta/LGPD</p></div>
+        <div class="stat"><h4>24/7</h4><p>Automações em produção</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CONTATO ─────────── -->
+<section id="contato">
+  <div class="section-inner">
+    <div class="section-label">Contato</div>
+    <div class="section-title">Entre em Contato</div>
+
+    <div class="contact-card">
+      <div>
+        <h3>Vamos conversar sobre seu projeto?</h3>
+        <p>Disponível para consultorias, integrações e projetos de automação via WhatsApp Business API.</p>
+        <div class="contact-info">
+          <a href="mailto:antoniomquadrosfilho@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            antoniomquadrosfilho@gmail.com
+          </a>
+          <a href="tel:+5514988013007">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +55 14 98801-3007
+          </a>
+        </div>
+      </div>
+      <div class="cta-aside">
+        <a href="mailto:antoniomquadrosfilho@gmail.com" class="btn">Enviar Mensagem</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── POLÍTICA DE PRIVACIDADE ─────────── -->
+<section id="privacidade">
+  <div class="section-inner">
+    <div class="section-label">Legal</div>
+    <div class="section-title">Política de Privacidade</div>
+    <p class="section-sub">Última atualização: 01 de março de 2025.</p>
+
+    <div class="privacy-box">
+
+      <h3>1. Identificação do Responsável</h3>
+      <p>Esta Política de Privacidade é aplicável a <strong>Antonio Marcos Arquiteto de Soluções</strong>, pessoa física prestadora de serviços, localizada na Alameda Licurgo, 572, Bauru, SP, CEP 17067-490, Brasil. Contato: <a href="mailto:antoniomquadrosfilho@gmail.com">antoniomquadrosfilho@gmail.com</a> | Telefone: +55 14 98801-3007.</p>
+
+      <h3>2. Dados Coletados</h3>
+      <p>Coletamos apenas os dados estritamente necessários para a prestação dos serviços contratados, podendo incluir: nome completo, endereço de e-mail, número de telefone (incluindo número do WhatsApp), informações da empresa e dados técnicos de integração fornecidos pelo contratante. Não coletamos dados de categorias sensíveis, conforme definido pelo Art. 5º, II, da Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018).</p>
+
+      <h3>3. Finalidade do Tratamento</h3>
+      <p>Os dados pessoais coletados são utilizados exclusivamente para: (a) prestação dos serviços de integração e arquitetura de software contratados; (b) comunicação sobre o andamento dos projetos; (c) emissão de documentos fiscais e financeiros; (d) cumprimento de obrigações legais e regulatórias, incluindo conformidade com as políticas do Meta / WhatsApp Business API.</p>
+
+      <h3>4. Base Legal</h3>
+      <p>O tratamento de dados é fundamentado nas seguintes bases legais previstas na LGPD: execução de contrato (Art. 7º, V), cumprimento de obrigação legal (Art. 7º, II) e legítimo interesse (Art. 7º, IX), sempre nos limites necessários à finalidade pretendida.</p>
+
+      <h3>5. Compartilhamento de Dados</h3>
+      <p>Não vendemos, alugamos ou cedemos dados pessoais a terceiros para fins comerciais. Podemos compartilhar dados estritamente necessários com plataformas parceiras (como Meta Platforms Inc.) quando indispensável à execução do serviço, e sempre mediante as garantias adequadas de proteção.</p>
+
+      <h3>6. Retenção e Exclusão</h3>
+      <p>Os dados são mantidos pelo período necessário à prestação do serviço e ao cumprimento de obrigações legais, não excedendo 5 (cinco) anos após o encerramento do contrato, salvo exigência legal em sentido contrário. Após esse prazo, os dados são eliminados de forma segura.</p>
+
+      <h3>7. Direitos do Titular</h3>
+      <p>Nos termos da LGPD, o titular dos dados possui o direito de: confirmar a existência de tratamento; acessar os dados; corrigir dados incompletos ou desatualizados; solicitar a anonimização, bloqueio ou eliminação de dados desnecessários; revogar o consentimento; e opor-se ao tratamento. Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:antoniomquadrosfilho@gmail.com">antoniomquadrosfilho@gmail.com</a>.</p>
+
+      <h3>8. Segurança</h3>
+      <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida, em conformidade com os padrões de segurança da informação aplicáveis.</p>
+
+      <h3>9. Uso do WhatsApp Business API</h3>
+      <p>Ao contratar serviços de integração com a WhatsApp Business API (WABA), o titular declara estar ciente de que as comunicações via WhatsApp são processadas pela Meta Platforms Inc., sujeita à sua própria Política de Privacidade e Termos de Serviço. O uso desta plataforma observa integralmente as Políticas de Uso Aceitável do WhatsApp Business.</p>
+
+      <h3>10. Alterações nesta Política</h3>
+      <p>Esta Política de Privacidade pode ser atualizada periodicamente. Alterações relevantes serão comunicadas diretamente aos contratantes. A versão vigente estará sempre disponível nesta página.</p>
+
+      <h3>11. Contato e Autoridade</h3>
+      <p>Dúvidas, solicitações ou reclamações relacionadas a esta Política podem ser enviadas para <a href="mailto:antoniomquadrosfilho@gmail.com">antoniomquadrosfilho@gmail.com</a>. Caso a questão não seja resolvida diretamente, o titular pode contatar a Autoridade Nacional de Proteção de Dados (ANPD) em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a>.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Antonio Marcos Arquiteto de Soluções</div>
+        <div>Alameda Licurgo, 572 – Bauru, SP – CEP 17067-490 – Brasil</div>
+        <div>CNPJ/CPF do responsável legal disponível mediante solicitação.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="#privacidade">Política de Privacidade</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Antonio Marcos Arquiteto de Soluções. Todos os direitos reservados. Desenvolvido em conformidade com a LGPD e as políticas do Meta / WhatsApp Business API.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
