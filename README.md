@@ -1,11 +1,3 @@
-Com certeza, Antônio. Para elevar o nível visual sem perder o profissionalismo, podemos utilizar **badges (escudos)** para as tecnologias, uma organização por **tabelas** (que facilita a leitura) e ícones estratégicos.
-
-A ideia é que o recrutador ou parceiro técnico consiga "bater o olho" e identificar seu stack, enquanto o texto detalhado valida sua senioridade como Arquiteto e Desenvolvedor.
-
-Aqui está uma versão com um design mais moderno e limpo:
-
----
-
 # 👨‍💻 Antônio Marcos de Quadros Filho
 
 ### **Solutions Architect | Senior Software Engineer**
