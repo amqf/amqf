@@ -19,11 +19,11 @@ Sou um **Desenvolvedor com +10 anos de experiência** focado na construção de 
 
 | Categoria | Tecnologias |
 | --- | --- |
-| **Linguagens** |  |
-| **Frameworks** |  |
-| **Arquitetura** | <br>`Microservices` `DDD` `Clean Architecture` `Rest APIs` `Event-Driven` |
-| **Data & IoT** |    `MQTT` `Telemetry` |
-| **Cloud & Ops** |    `CI/CD` |
+| **Linguagens** | `PHP` `Javascript` `Go` `Python` |
+| **Frameworks** | `Laravel` `ReactJS` `VueJS` |
+| **Arquitetura** | `Microservices` `DDD` `Clean Architecture` `Rest APIs` `Event-Driven` `CQS` `CQRS` |
+| **Data & IoT** | `MQTT` `Telemetry` |
+| **Cloud & Ops** | `CI/CD` |
 
 ---
 
@@ -32,14 +32,11 @@ Sou um **Desenvolvedor com +10 anos de experiência** focado na construção de 
 * 
 **IA e Automação (Automabo):** Atuação como responsável técnico por Agentes de IA e integração de LLMs para automação de processos jurídicos e transcrição otimizada com WhisperX.
 
-
 * 
 **Alta Performance (Ikatec):** Otimização de vazão de processamento em 480x (PHP + Supervisor), reduzindo drasticamente o tempo de resposta do serviço.
 
-
 * 
 **Observabilidade (OLX Brasil):** Implementação de arquitetura de logs e métricas com Elastic Stack (ELK), reduzindo o MTTD em 15%.
-
 
 * 
 **Modernização (Firework):** Substituição de sistema legado por microserviço, reduzindo o tempo de geração de relatórios de 30 minutos para processamento instantâneo.
