@@ -29,17 +29,13 @@ Sou um **Desenvolvedor com +10 anos de experiência** focado na construção de 
 
 ### 🚀 Experiências de Impacto
 
-* 
-**IA e Automação (Automabo):** Atuação como responsável técnico por Agentes de IA e integração de LLMs para automação de processos jurídicos e transcrição otimizada com WhisperX.
+* **IA e Automação (Automabo):** Atuação como responsável técnico por Agentes de IA e integração de LLMs para automação de processos jurídicos e transcrição otimizada com WhisperX.
 
-* 
-**Alta Performance (Ikatec):** Otimização de vazão de processamento em 480x (PHP + Supervisor), reduzindo drasticamente o tempo de resposta do serviço.
+* **Alta Performance (Ikatec):** Otimização de vazão de processamento em 480x (PHP + Supervisor), reduzindo drasticamente o tempo de resposta do serviço.
 
-* 
-**Observabilidade (OLX Brasil):** Implementação de arquitetura de logs e métricas com Elastic Stack (ELK), reduzindo o MTTD em 15%.
+* **Observabilidade (OLX Brasil):** Implementação de arquitetura de logs e métricas com Elastic Stack (ELK), reduzindo o MTTD em 15%.
 
-* 
-**Modernização (Firework):** Substituição de sistema legado por microserviço, reduzindo o tempo de geração de relatórios de 30 minutos para processamento instantâneo.
+* **Modernização (Firework):** Substituição de sistema legado por microserviço, reduzindo o tempo de geração de relatórios de 30 minutos para processamento instantâneo.
 
 ---
 
