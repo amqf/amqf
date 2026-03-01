@@ -21,15 +21,9 @@ Sou um **Desenvolvedor com +10 anos de experiência** focado na construção de 
 | --- | --- |
 | **Linguagens** |  |
 | **Frameworks** |  |
-| **Arquitetura** | <br>`Microservices` `DDD` `Clean Architecture` `Rest APIs` `Event-Driven` 
-
- |
-| **Data & IoT** |    `MQTT` `Telemetry` 
-
- |
-| **Cloud & Ops** |    `CI/CD` 
-
- |
+| **Arquitetura** | <br>`Microservices` `DDD` `Clean Architecture` `Rest APIs` `Event-Driven` |
+| **Data & IoT** |    `MQTT` `Telemetry` |
+| **Cloud & Ops** |    `CI/CD` |
 
 ---
 
