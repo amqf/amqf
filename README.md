@@ -6,7 +6,7 @@
 
 ### 📖 Sobre mim
 
-Sou um **Engenheiro de Software com mais de 10 anos de experiência** focado na construção de sistemas distribuídos e arquiteturas escaláveis. Minha especialidade é **arquitetar e desenvolver a solução completa**, garantindo que o design técnico suporte as necessidades de negócio. Tenho uma forte atuação na integração de software com o mundo físico (IoT) e na otimização de sistemas de alta performance.
+Sou um **Desenvolvedor com +10 anos de experiência** focado na construção de sistemas distribuídos e arquiteturas escaláveis. Minha especialidade é **arquitetar e desenvolver a solução completa**, garantindo que o design técnico suporte as necessidades de negócio. Tenho uma forte atuação na integração de software com o mundo físico (IoT) e na otimização de sistemas de alta performance.
 
 > 
 > **Diferencial:** Embora minha base principal seja o desenvolvimento e a arquitetura, possuo autonomia operacional em Cloud e DevOps para viabilizar o deploy e a observabilidade das soluções que projeto.
